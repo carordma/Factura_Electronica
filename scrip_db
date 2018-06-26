@@ -12,10 +12,59 @@ nombre_comercial varchar(50) not null,
 telefono1 varchar(20) not null,
 telefono2 varchar(20),
 email varchar(30),
-codigo_postal varchar(10)
-direccion varchar(100)
+codigo_postal varchar(10),
+direccion varchar(100),
+logo varchar(200),
+certificado varchar(200),
+password_certificado varchar(25),
+asunto_correo varchar(200),
+texto_notificacion varchar(500),
+email_copia varchar(30),
+
 CREATEDBY VARCHAR(50),
 CREATEDATE DATE,
 UPDATEDBY VARCHAR(50),
-UPDATEDATE DATE
+UPDATEDATE DATE,
+
+PRIMARY KEY id_configuracion;
+
 ) INNODB= ENGINNE;
+
+DROP TABLE ID EXISTS consecutivo;
+
+CREATE TABLE IF NOT EXISTS consecutivo
+(
+id_consecutivo int auto_increment,
+consecutivo varchar(50) not null,
+
+)
+
+DROP TABLE IF EXISTS clientes;
+
+CREATE TABLE IF NOT EXISTS clientes
+(
+id_cliente int auto_increment,
+cedula varchar(20) not null,
+nombre_completo varchar(100),
+nombre varchar(50) not null,
+apellido1 varchar(50) not null,
+apellido2 varchar(50),
+
+
+
+CREATEDBY VARCHAR(50),
+CREATEDATE DATE,
+UPDATEDBY VARCHAR(50),
+UPDATEDATE DATE,
+
+PRIMARY KEY id_cliente,
+) INNODB = ENGINNE;
+
+DROP TABLE IF EXISTS factura;
+CREATE TABLE IF NOT EXISTS factura
+(
+id_factura int auto_increment,
+factura varchar()
+) INNODB = ENGINNE;
+
+
