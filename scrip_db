@@ -1,0 +1,21 @@
+DROP TABLE IF EXITS configuracion;
+
+CREATE TABLE IF NOT EXITS configuracion
+(
+id_configuracion int auto_increment,
+usuario varchar(100) not null,
+password varchar(25) not null,
+tipo_identificacion enum('CED','JUR'),
+cedula varchar(30) not null,
+nombre varchar(50) not null,
+nombre_comercial varchar(50) not null,
+telefono1 varchar(20) not null,
+telefono2 varchar(20),
+email varchar(30),
+codigo_postal varchar(10)
+direccion varchar(100)
+CREATEDBY VARCHAR(50),
+CREATEDATE DATE,
+UPDATEDBY VARCHAR(50),
+UPDATEDATE DATE
+) INNODB= ENGINNE;
